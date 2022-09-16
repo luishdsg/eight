@@ -8593,11 +8593,6 @@
   dependencies:
     "react-native-url-handler" "^0.4.2"
 
-"react-native-network-info@^5.2.1":
-  "integrity" "sha512-iam74xXtrSqqZurCl1/bSjZ9jXcsJY84g7brx1/4uVGCY26c6m+4CArHNSHOsz5ATg2NQT+81sjNy0KlCPyK4g=="
-  "resolved" "https://registry.npmjs.org/react-native-network-info/-/react-native-network-info-5.2.1.tgz"
-  "version" "5.2.1"
-
 "react-native-paper@^4.12.4":
   "integrity" "sha512-NMfLSIN0Ql/KCTSimhgzbEOgz371dqDAgChnp2VE4H7n1B0Pwy0bzPKmY/T8trVvEdmJRXrbXAusaFq8elDXNg=="
   "resolved" "https://registry.npmjs.org/react-native-paper/-/react-native-paper-4.12.4.tgz"
@@ -8661,7 +8656,7 @@
     "postcss-value-parser" "^4.2.0"
     "styleq" "^0.1.2"
 
-"react-native@*", "react-native@>=0.42.0", "react-native@>=0.47", "react-native@0.69.5":
+"react-native@*", "react-native@>=0.42.0", "react-native@0.69.5":
   "integrity" "sha512-4Psrj1nDMLQjBXVH8n3UikzOHQc8+sa6NbxZQR0XKtpx8uC3HiJBgX+/FIum/RWxfi5J/Dt/+A2gLGmq2Hps8g=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.69.5.tgz"
   "version" "0.69.5"
