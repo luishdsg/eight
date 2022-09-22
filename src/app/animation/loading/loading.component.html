@@ -1,0 +1,52 @@
+  <div class="box-container w-100 h-100">
+    <div [ngClass]="collapsed ? 'box-press' : ''" (click)="btn()" class="box cursor">
+      <ion-text class="w-100 bg-danger ">
+        <ion-grid [ngClass]="collapsed ? 'language' : 'd-none'" class="p-2 text-center h-100">     
+         <br/>
+          <ion-row *ngFor="let lang of datasave" class="row h-75">
+            <ion-text>
+            <span class="fw-700 text-dark">
+              {{ 'HOME.LANG' | translate }}
+            </span>
+          </ion-text>
+            <ion-col class="col">
+                <ion-button [routerLink]="['/home']" (click)="changeLanguage('pt')"  fill="clear" class="bg-clear fz-15 text-dark letter-spacing fw-300">
+                  {{lang.pt}}
+                </ion-button>
+            </ion-col>
+            <ion-col class="col">
+              <ion-button fill="clear"  (click)="changeLanguage('en')" class="bg-clear fz-15 text-dark letter-spacing fw-300">
+                {{lang.en}}
+              </ion-button> 
+            </ion-col>
+            <ion-col class="col">
+              <ion-button fill="clear"  class="bg-clear fz-15 text-dark letter-spacing fw-300">
+                {{lang.fr}}
+              </ion-button>
+            </ion-col>
+            <ion-col class="col">
+              <ion-button fill="clear"  class="bg-clear fz-15 text-dark letter-spacing fw-300">
+                {{lang.de}}
+              </ion-button>
+            </ion-col>
+            <ion-col class="col ">
+              <ion-button fill="clear"  class="bg-clear fz-15 text-dark letter-spacing fw-300">
+                {{lang.ru}}
+              </ion-button>
+            </ion-col>
+            <ion-col class="col ">
+              <ion-button fill="clear"  class="bg-clear fz-15 text-dark letter-spacing fw-300">
+                {{lang.jp}}
+              </ion-button>
+            </ion-col>
+
+
+          </ion-row>
+        </ion-grid>
+      </ion-text>
+    </div>
+    <!-- i talk -->
+    <ion-text class="position-absolute" style="margin-top: 111px;">
+      <span *ngIf="press" class="color-dark-45">Press me</span>
+    </ion-text>
+  </div>

@@ -1,0 +1,125 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+*, ion-button{
+    font-family: 'Poppins', sans-serif;
+}
+ion-button,
+ion-button:hover,
+ion-button:focus{
+outline:none;
+border: none;
+}
+
+tr{
+    border-style: hidden;
+}
+td{
+    padding: 0.5rem 0.2rem !important;
+}
+// FONTS
+.fw-300{
+    font-weight: 300 !important;
+}
+.fw-400{
+    font-weight: 400 !important;
+}
+.fw-500{
+    font-weight: 500 !important;
+}
+.fw-700{
+    font-weight: 700 !important;
+}
+.fw-900{
+    font-weight: 900 !important;
+}
+// TEXT
+.text-center{
+    text-align: -webkit-center !important;
+}
+.text-left{
+    text-align: -webkit-left !important;
+}
+.text-right{
+    text-align: -webkit-right !important;
+}
+.letter-spacing{
+    letter-spacing: 0px;
+}
+.fz-15{
+    font-size: 15px !important;
+}
+// COLORS-BG
+.color-dark-45{
+    color: var(--ion-color-step-450);
+}
+.bg-clear{
+    background-color: #fafafa;
+}
+// TOOL´S
+.cursor{
+    cursor: pointer;
+}
+.op-0{
+    opacity: 0;
+}
+
+.d-none{
+    display: none !important;
+}
+
+// BORDER
+.border8{
+    border-radius: 8px !important;
+}
+
+
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+
+  .ios body{
+    --ion-background-color: transparent !important;
+  }
+  .header-md::after{
+    height: 0px !important;
+  }
