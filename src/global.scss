@@ -25,101 +25,133 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-*, ion-button{
+*,
+ion-button {
     font-family: 'Poppins', sans-serif;
 }
+
 ion-button,
 ion-button:hover,
-ion-button:focus{
-outline:none;
-border: none;
+ion-button:focus {
+    outline: none;
+    border: none;
 }
 
-tr{
+tr {
     border-style: hidden;
 }
-td{
+
+td {
     padding: 0.5rem 0.2rem !important;
 }
+
+// CLASS-GLOBAL
+.ios body {
+    --ion-background-color: #fafafa !important;
+}
+
+.header-md::after {
+    height: 0px !important;
+}
+
+.header-collapse-condense ion-toolbar {
+    --background: transparent !important;
+}
+
 // FONTS
-.fw-300{
+.fw-300 {
     font-weight: 300 !important;
 }
-.fw-400{
+
+.fw-400 {
     font-weight: 400 !important;
 }
-.fw-500{
+
+.fw-500 {
     font-weight: 500 !important;
 }
-.fw-700{
+
+.fw-700 {
     font-weight: 700 !important;
 }
-.fw-900{
+
+.fw-900 {
     font-weight: 900 !important;
 }
+
 // TEXT
-.text-center{
+.text-center {
     text-align: -webkit-center !important;
 }
-.text-left{
+
+.text-left {
     text-align: -webkit-left !important;
 }
-.text-right{
+
+.text-right {
     text-align: -webkit-right !important;
 }
-.letter-spacing{
+
+.letter-spacing {
     letter-spacing: 0px;
 }
-.fz-15{
+
+.fz-15 {
     font-size: 15px !important;
 }
+
 // COLORS-BG
-.color-dark-45{
+.color-dark-45 {
     color: var(--ion-color-step-450);
 }
-.bg-clear{
-    background-color: #fafafa;
+
+.bg-clear {
+    background: #fafafa  !important;
 }
+
+.bg-blur {
+    background-color: rgba(255, 255, 255, 0.379);
+    backdrop-filter: blur(3px);
+}
+
 // TOOL´S
-.cursor{
+.cursor {
     cursor: pointer;
 }
-.op-0{
+
+.op-0 {
     opacity: 0;
 }
 
-.d-none{
+.d-none {
     display: none !important;
 }
 
 // BORDER
-.border8{
+.border8 {
     border-radius: 8px !important;
 }
 
+.border-bottom-clear {
+    border-bottom: var(--ion-color-light-tint) !important;
+}
 
-  
-  #container strong {
+
+
+#container strong {
     font-size: 20px;
     line-height: 26px;
-  }
-  
-  #container p {
+}
+
+#container p {
     font-size: 16px;
     line-height: 22px;
-  
-    color: #8c8c8c;
-  
-    margin: 0;
-  }
-  
-  #container a {
-    text-decoration: none;
-  }
 
-  .ios body{
-    --ion-background-color: transparent !important;
-  }
-  .header-md::after{
-    height: 0px !important;
-  }
+    color: #8c8c8c;
+
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
