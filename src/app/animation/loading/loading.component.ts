@@ -39,8 +39,16 @@ export class LoadingComponent implements OnInit {
       } else if (translate === 'pt') {
         localStorage.setItem('translate', 'pt');
         this.changeLanguage('pt');
-      }
-      else if (translate === 'fr') {
+      } else if (translate === 'jp') {
+        localStorage.setItem('translate', 'jp');
+        this.changeLanguage('jp');
+      } else if (translate === 'ru') {
+        localStorage.setItem('translate', 'ru');
+        this.changeLanguage('ru');
+      } else if (translate === 'de') {
+        localStorage.setItem('translate', 'de');
+        this.changeLanguage('de');
+      } else if (translate === 'fr') {
         localStorage.setItem('translate', 'fr');
         this.changeLanguage('fr');
       }

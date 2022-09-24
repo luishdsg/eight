@@ -25,17 +25,17 @@
               </ion-button>
             </ion-col>
             <ion-col class="col">
-              <ion-button [routerLink]="['/home']" fill="clear"  class="bg-clear fz-15 color-dark-45 letter-spacing fw-500">
+              <ion-button [routerLink]="['/home']" fill="clear" (click)="changeLanguage('de')" class="bg-clear fz-15 color-dark-45 letter-spacing fw-500">
                 {{lang.de}}
               </ion-button>
             </ion-col>
             <ion-col class="col ">
-              <ion-button [routerLink]="['/home']" fill="clear"  class="bg-clear fz-15 color-dark-45 letter-spacing fw-500">
+              <ion-button [routerLink]="['/home']" fill="clear" (click)="changeLanguage('ru')"  class="bg-clear fz-15 color-dark-45 letter-spacing fw-500">
                 {{lang.ru}}
               </ion-button>
             </ion-col>
             <ion-col class="col ">
-              <ion-button [routerLink]="['/home']" fill="clear"  class="bg-clear fz-15 color-dark-45 letter-spacing fw-500">
+              <ion-button [routerLink]="['/home']" fill="clear" (click)="changeLanguage('jp')" class="bg-clear fz-15 color-dark-45 letter-spacing fw-500">
                 {{lang.jp}}
               </ion-button>
             </ion-col>
