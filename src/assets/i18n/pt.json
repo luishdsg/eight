@@ -8,5 +8,10 @@
     "HELLO": "OLá",
     "NEXT": "Confirmar",
     "ALERT": "aviso, o conteúdo a seguir pode conter:"
+  },
+  "LEVELS": {
+    "CODE": "senha",
+    "TYPE": "digite aqui",
+    "WRONG": "Humm...acho que algo está incorreto"
   }
 }

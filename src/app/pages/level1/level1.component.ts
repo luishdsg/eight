@@ -22,13 +22,10 @@ export class Level1Component implements OnInit {
   }
 
   next(id: any){
-    if(this.pass === 'ok'){
+    if(this.pass === '4'){
       this.router.navigate(['/part-II']);
     }else{
       this.id = id;
     }
   }
-
-
-
 }

@@ -8,5 +8,10 @@
       "AGE": "j'ai plus de 18 ans",
       "ALERT": "Attention, le contenu suivant peut contenir :",
       "NEXT": "suivant"
+    },
+    "LEVELS": {
+      "CODE": "code",
+      "WRONG": "Oups!... quelque chose ne va pas",
+      "TYPE": "Écrivez ici"
     }
-  }
+  } 

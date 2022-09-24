@@ -9,5 +9,10 @@
     "AGE": "I'm over 18 years old",
     "ALERT": "Warning, the following content may contain:",
     "NEXT": "Next"
-  }
+  },
+  "LEVELS": {
+    "CODE": "code",
+    "WRONG": "Oops!...something is wrong",
+    "TYPE": "type here"
+  } 
 }
