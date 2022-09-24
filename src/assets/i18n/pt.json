@@ -1,6 +1,12 @@
 {
   "HOME": {
-    "LANG": "Linguagem",
-    "HELLO": "OLá"
+    "SEX": "cenas de sexo explicito",
+    "DRUGS": "imagens de uso de drogas",
+    "VIOLENCE": "violência extrema",
+    "TERM": "improprias para menores de idade, confirme sua idade e nos ajude a manter a classificação indicativa apropriada",
+    "AGE": "sou maior de 18 anos!",
+    "HELLO": "OLá",
+    "NEXT": "Confirmar",
+    "ALERT": "aviso, o conteúdo a seguir pode conter:"
   }
 }

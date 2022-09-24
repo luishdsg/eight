@@ -7,12 +7,15 @@ import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Level1Component } from './pages/level1/level1.component';
+import { IonCustomScrollbarModule } from 'ion-custom-scrollbar';
+import { Level2Component } from './pages/level2/level2.component';
 
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions, @typescript-eslint/naming-convention
@@ -24,7 +27,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     LoadingComponent,
-    HomeComponent
+    HomeComponent,
+    Level1Component,
+    Level2Component,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     IonicModule.forRoot(),
     AppRoutingModule,
     NgbModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
+    IonCustomScrollbarModule,
     TranslateModule.forRoot({
         loader: {
         provide: TranslateLoader,

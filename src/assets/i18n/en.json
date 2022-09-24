@@ -1,6 +1,13 @@
 {
   "HOME": {
-    "LANG": "Lenguage",
-    "HELLO": "Hello"
+    "LANG": "Language",
+    "SEX": "explicit sex scenes",
+    "DRUGS": "drug use pictures",
+    "VIOLENCE": "extreme violence",
+    "TERM": "unsuitable for minors, please confirm your age and help us maintain the appropriate rating",
+    "HELLO": "Hi",
+    "AGE": "I'm over 18 years old",
+    "ALERT": "Warning, the following content may contain:",
+    "NEXT": "Next"
   }
 }

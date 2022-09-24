@@ -1,0 +1,138 @@
+    - ENIGMA NUMERO #33 - dica§ Follow the reasoning of the alphabet 4x4
+
+abcd -
+efgh -
+ijkl -
+mnop -
+qrst -
+uvwx - 
+yz -
+
+weight lijter - TRADUÇÃO PARA ALGUMA LINGUA
+
+
+#annual - dica § Follow the reasoning of the northem hemisphere
+
+nira = algum nome cientifico para algum inceto eu acho/pesquisar
+1winter =  junho/julho/agosto
+3summer = decembro/janeiro/fevereiro
+2spring = setembro/outubro
+4autumn = abril/maio/junho
+
+ #video dos glith
+
+- desfazer e refazer COMPPPLLETO MERMÃO
+
+verifique = instagram.com/p/BhlXHajAq_Y/ - sla
+
+
+
+https://streamable.com/eg5ac
+
+http://www.yourfilelink.com/get.php?fid=2067282
+
+
+Znkpezagkw tcgngkw
+
+Ertpxptbw uczqpzwbw
+            
+Xrjpqtrazq ogbw
+
+Pktzneqrgigkwpjpcpw oznpkbw
+
+Ubjgqkrazq pnegqrazq
+
+Qgf oznpkbw
+
+Ertpxptbw uczqpzwbw
+
+Xzqapwwpnbw oznpkbw
+
+pktzneqrgigkwpjpcpw uczpqzwbw
+
+Qgogneazq tcgngkw
+
+Tzkwgqbrazq
+
+numeross abaixo = 5478edfb83a5672c8f3f3cb750f4ebb0e18c4feb9fd78d7e08df2fd6d545681
+
+sequência = 31 12 42 23 24 35 12 42 24 62
+
+GDUAIIBFESTZI
+
+
+
+
+//////////////////jv///////
+
+importar pygame, aleatório
+from pygame.locals import  *
+
+def  on_grid_random ():
+    x = random.randint ( 0 , 590 )
+    y = random.randint ( 0 , 590 )
+    return (x // 10  *  10 , y // 10  *  10 )
+
+ colisão de def ( c1 , c2 ):
+    return (c1 [ 0 ] == c2 [ 0 ]) e (c1 [ 1 ] == c2 [ 1 ])
+
+UP  =  0
+DIREITA  =  1
+DOWN  =  2
+ESQUERDA  =  3
+
+pygame.init ()
+tela = pygame.display.set_mode (( 600 , 600 ))
+pygame.display.set_caption ( ' Snake ' )
+
+cobra = [( 200 , 200 ), ( 210 , 200 ), ( 220 , 200 )]
+snake_skin = pygame.Surface (( 10 , 10 ))
+snake_skin.fill (( 255 , 255 , 255 ))
+
+apple_pos = on_grid_random ()
+apple = pygame.Surface (( 10 , 10 ))
+apple.fill (( 255 , 0 , 0 ))
+
+my_direction =  ESQUERDA
+
+clock = pygame.time.Clock ()
+
+enquanto  verdadeiro :
+    relógio.tick ( 10 )
+    para o evento em pygame.event.get ():
+        if event.type ==  QUIT :
+            pygame.quit ()
+
+        if event.type ==  KEYDOWN :
+            if event.key ==  K_UP :
+                my_direction =  UP
+            if event.key ==  K_DOWN :
+                my_direction =  DOWN
+            if event.key ==  K_LEFT :
+                my_direction =  ESQUERDA
+            if event.key ==  K_RIGHT :
+                my_direction =  DIREITA
+
+    se colisão (cobra [ 0 ], apple_pos):
+        apple_pos = on_grid_random ()
+        cobra.append (( 0 , 0 ))
+
+    para eu na  faixa ( len (cobra) -  1 , 0 , - 1 ):
+        cobra [i] = (cobra [i - 1 ] [ 0 ], cobra [i - 1 ] [ 1 ])
+
+    if my_direction ==  UP :
+        cobra [ 0 ] = (cobra [ 0 ] [ 0 ], cobra [ 0 ] [ 1 ] -  10 )
+    if my_direction ==  DOWN :
+        cobra [ 0 ] = (cobra [ 0 ] [ 0 ], cobra [ 0 ] [ 1 ] +  10 )
+    if my_direction ==  DIREITA :
+        cobra [ 0 ] = (cobra [ 0 ] [ 0 ] +  10 , cobra [ 0 ] [ 1 ])
+    if my_direction ==  ESQUERDA :
+        cobra [ 0 ] = (cobra [ 0 ] [ 0 ] -  10 , cobra [ 0 ] [ 1 ])
+
+    screen.fill (( 0 , 0 , 0 ))
+    screen.blit (apple, apple_pos)
+    para pos em cobra:
+        screen.blit (snake_skin, pos)
+
+    pygame.display.update ()
+

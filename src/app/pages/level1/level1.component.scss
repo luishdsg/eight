@@ -1,0 +1,141 @@
+ion-title{
+    color: var(--ion-color-step-300);
+}
+ion-icon{
+    font-size: 30px !important;
+}
+
+.c-checkbox {
+    display: none;
+  }
+  .c-checkbox:checked + .c-formContainer .c-form {
+    width: 100%;
+  }
+  .c-checkbox:checked + .c-formContainer .c-form__toggle {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  .c-checkbox:checked + .c-formContainer .c-form__input,
+  .c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+    transition: 0.2s 0.1s;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .c-formContainer,
+  .c-form,
+  .c-form__toggle {
+    width: 90%;
+    max-width: 400px;
+    height: 3.25em;
+  }
+  
+
+  
+  .c-form {
+    left: 50%;
+    position: absolute;
+    border-radius: 6.25em;
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid gray;
+    transform: translateX(-50%);
+    padding: 0.325em;
+    box-sizing: border-box;
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .c-form__toggle {
+    color: white;
+    position: absolute;
+    border-radius: 6.25em;
+    transition: 0.2s;
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .c-form__toggle::before {
+    font-size: 1.75em;
+    content: attr(data-title);
+  }
+  
+  .c-form__input,
+  .c-form__button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+    border-radius: 5em;
+    box-sizing: border-box;
+  }
+  
+  .c-form__input,
+  .c-form__buttonLabel {
+    font-size: 1em;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+  }
+  
+  .c-form__input {
+    color: white;
+    height: 100%;
+    width: 100%;
+  }
+  .c-form__input::placeholder {
+    color: currentColor;
+  }
+  .c-form__input:required:valid + .c-form__buttonLabel {
+    color: #ffffff;
+  }
+  .c-form__input:required:valid + .c-form__buttonLabel::before {
+    pointer-events: initial;
+  }
+  
+  .c-form__buttonLabel {
+    color: gray;
+    height: 100%;
+    width: auto;
+  }
+  .c-form__buttonLabel::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  
+  .c-form__button {
+    color: inherit;
+    padding: 0 19px;
+    height: 100%;
+    border: 1px solid gray;
+    width: 100%;
+    background-color: black;
+  }
+
+  .oops {
+    animation: .2s shake;
+  }
+  
+  @keyframes shake {
+    0% { transform: skewX(-35deg); }
+    25% { transform: skewX(35deg); }
+    50% { transform: skewX(-35deg); }
+    75% { transform: skewX(35deg); }
+    100% { transform: skewX(-35deg); }
+  }
+  // WRONG
+  .wrong{
+    border: 1px solid red !important;
+    color: red !important;
+  }

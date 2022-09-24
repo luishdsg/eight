@@ -20,42 +20,48 @@ export class LoadingComponent implements OnInit {
     public translate: TranslateService,
 
   ) {
-    translate.addLangs(['pt', 'en']);
+    translate.addLangs(['pt', 'en', 'fr', 'ru', 'de', 'jp']);
     translate.setDefaultLang('en');
     translate.use('en');
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.datasave = this.save.language;
     // eslint-disable-next-line prefer-const
     let translate = localStorage.getItem('translate');
-    if(!translate) {
+    if (!translate) {
       localStorage.setItem('translate', 'en');
       this.changeLanguage('en');
     } else {
-      if(translate === 'en') {
-      localStorage.setItem('translate', 'en');
-      this.changeLanguage('en');
-      } else {
+      if (translate === 'en') {
+        localStorage.setItem('translate', 'en');
+        this.changeLanguage('en');
+      } else if (translate === 'pt') {
         localStorage.setItem('translate', 'pt');
         this.changeLanguage('pt');
       }
+      else if (translate === 'fr') {
+        localStorage.setItem('translate', 'fr');
+        this.changeLanguage('fr');
+      }
     }
   }
-  changeLanguage(lang: string): void{
+  changeLanguage(lang: string): void {
     this.translate.use(lang);
-    if(lang === 'en'){
+    if (lang === 'en') {
       localStorage.setItem('translate', 'en');
-    }else{
+    } else if (lang === 'pt') {
       localStorage.setItem('translate', 'pt');
+    } else if (lang === 'fr') {
+      localStorage.setItem('translate', 'fr');
     }
   }
-  btn(){
+  btn() {
     this.collapsed = true;
     this.press = false;
   }
 
-  pt(){
+  home() {
     this.router.navigate(['/home']);
   }
 

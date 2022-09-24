@@ -1,0 +1,40 @@
+<ion-header class="w3-black" collapse="fade">
+  <ion-toolbar>
+    <ion-title>Part I</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content  class="w3-black" scroll="true" fullscreen="true">
+  <ion-header class="w3-black" collapse="condense">
+    <ion-toolbar class="w3-black d-flex" >
+      <ion-title slot="start" size="large">Part I</ion-title>
+      <ion-button fill="clear" download="puzzle" href="../../../assets/I06/1.jpg" slot="end">
+        <ion-icon name="download-outline"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid class="w3-black mb-5 p-0">
+    <ion-row class="row flex flex-column">
+      <ion-col class="col-12 py-3 text-center">
+        <ion-img src="../../../assets/I06/1.jpg" class="puzzle-img h-auto w-100"></ion-img>
+      </ion-col>
+    
+      <ion-col class="col-12 text-center">
+        <input class="c-checkbox" type="checkbox" id="checkbox">
+        <div class="c-formContainer position-relative">
+          <form  [ngClass]="{'wrong': id === 1 }" id="1"  [formGroup]="form" class="c-form">
+            <ion-input [(ngModel)]="pass" formControlName="partI" class="c-form__input text-left" placeholder="code..." type="text" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></ion-input>
+            <label class="c-form__buttonLabel" for="checkbox">
+              <button  [ngClass]="{'wrong': id === 1 }" id="1"  (click)="next(id=1)" [disabled]="this.form.controls.partI.value === ''" class="c-form__button d-flex ion-align-items-center" type="submit">
+                <ion-icon name="paper-plane-outline"></ion-icon>
+              </button>
+            </label>
+            <label class="c-form__toggle" for="checkbox" data-title="type here"></label>
+          </form>
+        </div>
+        <ion-text  [ngClass]="{'d-block': id === 1 }" id="1" class="oops"  style="display: none;">
+            <span class="text-danger oops">Oops!...something is wrong</span>
+          </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

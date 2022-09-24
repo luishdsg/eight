@@ -1,9 +1,50 @@
-  <ion-header class="" collapse="condense">
-    <ion-toolbar class="border-bottom-clear bg-blur">
-      <ion-title class="font" color="light" size="large">{{ 'HOME.HELLO' | translate }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
 <ion-content [fullscreen]="true">
-
+  <ion-grid class="position-absolute w-100 h-100 top-0 p-0 m-0">
+    <div
+      class="bg-blur d-flex top-0 w-100 h-100 ion-justify-content-center ion-align-items-center"
+    >
+      <ion-card class="w-100 card-content h-fit">
+        <ion-text class="d-flex ion-align-items-center">
+          <span class="fw-700 fz-18">{{ "HOME.ALERT" | translate }}</span>
+        </ion-text>
+        <ion-row class="row">
+          <ion-col class="col-12 px-0 d-flex ion-align-items-center">
+            <ion-img src="../../assets/icon/drugs.svg"></ion-img>
+            <ion-text>
+              <span class="">{{ "HOME.DRUGS" | translate }}</span>
+            </ion-text>
+          </ion-col>
+          <ion-col class="col-12 px-0 d-flex ion-align-items-center">
+            <ion-img src="../../assets/icon/skull.svg"></ion-img>
+            <ion-text>
+              <span class="">{{ "HOME.VIOLENCE" | translate }}</span>
+            </ion-text>
+          </ion-col>
+          <ion-col class="col-12 px-0 d-flex ion-align-items-center">
+            <ion-img src="../../assets/icon/intersex.svg"></ion-img>
+            <ion-text>
+              <span class="">{{ "HOME.SEX" | translate }}</span>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-text class="py-3">
+          <span class="fw-300 fz-12">{{ "HOME.TERM" | translate }}</span>
+          <form [formGroup]="form" class="pt-3 d-flex ion-align-items-center ion-justify-content-between">
+            <div class="">
+                  <span class="">{{'HOME.AGE' | translate}}</span>
+            <input (click)="next()" type="checkbox" id="_checkbox" formControlName="checkage" [value]="true" />
+            <label for="_checkbox">
+              <div id="tick_mark"></div>
+            </label>
+            </div>
+        
+              <button *ngIf="Next" type="submit" (click)="submit()" 
+              [disabled]="this.form.controls.checkage.value === false" class="btn fz-12">
+                {{'HOME.NEXT' | translate}}
+          </button>
+          </form>
+        </ion-text>
+      </ion-card>
+    </div>
+  </ion-grid>
 </ion-content>
