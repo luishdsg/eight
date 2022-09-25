@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Level1Component } from './pages/level1/level1.component';
 import { IonCustomScrollbarModule } from 'ion-custom-scrollbar';
 import { Level2Component } from './pages/level2/level2.component';
+import { Level3Component } from './pages/level3/level3.component';
 
 
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions, @typescript-eslint/naming-convention
@@ -30,6 +31,15 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HomeComponent,
     Level1Component,
     Level2Component,
+    Level3Component,
+    // Level4Component,
+    // Level5Component,
+    // Level6Component,
+    // Level7Component,
+    // Level8Component,
+    // Level9Component,
+    // Level10Component,
+    // Level11Component,
   ],
   imports: [
     BrowserModule,
@@ -44,13 +54,13 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HttpClientModule,
     IonCustomScrollbarModule,
     TranslateModule.forRoot({
-        loader: {
+      loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       }
     }),],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
