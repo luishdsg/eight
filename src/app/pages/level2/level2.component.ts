@@ -13,7 +13,6 @@ export class Level2Component implements OnInit {
   layerClass: any;
   layers: any;
  isModalOpen = false;
-
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.form = this.formBuilder.group({
       partI: ['', [Validators.required]],
