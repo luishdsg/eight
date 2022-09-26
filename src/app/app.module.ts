@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Level1Component } from './pages/level1/level1.component';
-import { IonCustomScrollbarModule } from 'ion-custom-scrollbar';
 import { Level2Component } from './pages/level2/level2.component';
 import { Level3Component } from './pages/level3/level3.component';
 
@@ -52,7 +51,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    IonCustomScrollbarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
