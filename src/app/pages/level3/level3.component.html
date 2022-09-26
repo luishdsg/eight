@@ -1,9 +1,10 @@
+
 <ion-header class="w3-black" collapse="fade">
   <ion-toolbar>
     <ion-title>Part III - <ion-text class=""><span class=""> {{'MSG.3' | translate}}</span> </ion-text></ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content  class="w3-black" scroll="true" fullscreen="true">
+<ion-content class="w3-black ion-align-self-center max-w-500" scroll="true" fullscreen="true">
   <ion-header class="w3-black" collapse="condense">
     <ion-toolbar class="w3-black d-flex" >
       <ion-title slot="start" size="large">Part III</ion-title>
@@ -12,45 +13,62 @@
       </ion-button>
     </ion-toolbar>
   </ion-header>
-  <ion-grid class="w3-black mb-5 p-0">
-    <ion-row class="row flex flex-column">
+  <ion-grid class="w3-black h-75 mb-5 p-0">
+    <ion-row class="row  h-100">
       <ion-col class="col-12 py-3 text-center">
         <ion-img src="../../../assets/I06/UrsaMajor.jpg" class="puzzle-img h-auto w-100"></ion-img>
       </ion-col>
-    
-      <ion-col class="col-12 text-center">
-        <input class="c-checkbox" type="checkbox" id="checkbox">
-        <div class="c-formContainer position-relative">
-          <form  [ngClass]="{'wrong': id === 1 }" id="1"  [formGroup]="form" class="c-form">
-            <ion-input [(ngModel)]="pass" formControlName="partI" class="c-form__input text-left" placeholder="{{'LEVELS.CODE' | translate }}..." type="text" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required></ion-input>
-            <label class="c-form__buttonLabel" for="checkbox">
-              <button  [ngClass]="{'wrong': id === 1 }" id="1"  (click)="next(id=1)" [disabled]="this.form.controls.partI.value === ''" class="c-form__button d-flex ion-align-items-center" type="submit">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </button>
-            </label>
-            <label class="c-form__toggle" for="checkbox" data-title="">{{'LEVELS.TYPE'| translate}}</label>
-          </form>
-        </div>
-        <ion-text  [ngClass]="{'d-block': id === 1 }" id="1" class="oops"  style="display: none;">
-            <span class="text-danger oops">{{'LEVELS.WRONG' | translate}}</span>
-          </ion-text>
-      </ion-col>
-
-      <ion-col  class="col-12 py-3 text-center">
-        <ion-button id="open-modal3" fill="clear" class="text-secondary w-25 " expand="block">???</ion-button>
-
-        <ion-modal #modal trigger="open-modal3" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25, 0.5, 0.75]">
-          <ng-template>
-            <ion-content>
-              <ion-text class="d-flex mt-5 mx-4">
-                <span class="fw-300 text-secondary">
-                  {{'LEVELS.TIP' | translate}}
-                </span>
-              </ion-text>
-            </ion-content>
-          </ng-template>
-        </ion-modal>
-    </ion-col>
-    </ion-row>
+          <ion-col class="col-12 text-center">
+              <form 
+                [formGroup]="form"
+                class="">
+                <ion-input
+                  [(ngModel)]="pass"
+                  [ngClass]="{ wrong: id === 1 }"id="1"
+                  (keydown.space)="$event.preventDefault()"
+                  (keyup.enter)="next((id = 1))"
+                  formControlName="partI"
+                  class="text-left w-75 border rounded-2 w3-black"
+                  type="text"
+                  id="nme" 
+                  required 
+                  placeholder="{{'LEVELS.TYPE' | translate}}"
+                  autocomplete="off"
+                  name="name"
+                  maxlength="40"
+                  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                  required></ion-input>
+              </form>
+            <ion-text
+              [ngClass]="{ 'd-block': id === 1 }"
+              id="1"
+              class="oops"
+              style="display: none">
+              <span class="text-danger oops">{{"LEVELS.WRONG" | translate}}</span>
+            </ion-text>
+          </ion-col>
+          <ion-col class="col-12 py-3 text-center">
+            <ion-button
+              id="open-modal3"
+              fill="clear"
+              class="text-secondary w-25"
+              expand="block">???</ion-button>
+            <ion-modal
+              #modal
+              trigger="open-modal3"
+              [initialBreakpoint]="0.25"
+              [breakpoints]="[0, 0.25, 0.5, 0.75]">
+              <ng-template>
+                <ion-content color="dark">
+                  <ion-text class="d-flex mt-5 mx-4">
+                    <span class="fw-300 text-secondary">
+                      {{ "LEVELS.TIP" | translate }}
+                    </span>
+                  </ion-text>
+                </ion-content>
+              </ng-template>
+            </ion-modal>
+          </ion-col>
+        </ion-row>
   </ion-grid>
 </ion-content>
