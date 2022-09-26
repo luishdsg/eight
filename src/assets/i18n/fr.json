@@ -12,6 +12,10 @@
     "LEVELS": {
       "CODE": "code",
       "WRONG": "Oups!... quelque chose ne va pas",
-      "TYPE": "Écrivez ici"
+      "TYPE": "Écrivez ici",
+      "TIP": "utilisez la barre de code pour entrer le mot de passe et passer au niveau"
+    },
+    "MSG": {
+      "2": "FollowYourInstincts", "3" : "4"
     }
   } 

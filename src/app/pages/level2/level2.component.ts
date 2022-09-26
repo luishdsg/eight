@@ -7,12 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./level2.component.scss'],
 })
 export class Level2Component implements OnInit {
-
   form: FormGroup;
   pass: string;
   id: any;
   layerClass: any;
   layers: any;
+ isModalOpen = false;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.form = this.formBuilder.group({
@@ -28,5 +28,9 @@ export class Level2Component implements OnInit {
     }else{
       this.id = id;
     }
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
   }
 }

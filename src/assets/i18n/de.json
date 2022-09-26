@@ -12,6 +12,10 @@
     "LEVELS": {
       "CODE": "code",
       "WRONG": "Hoppla! ... etwas stimmt nicht",
-      "TYPE": "hier eingeben"
-    } 
+      "TYPE": "hier eingeben",
+      "TIP": "Verwenden Sie die Codeleiste, um das Passwort einzugeben und zum Level zu gelangen"
+    } ,
+    "MSG": {
+      "2": "FollowYourInstincts", "3" : "4"
+    }
   }
