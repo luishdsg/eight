@@ -29,6 +29,9 @@
 ion-button {
     font-family: 'Poppins', sans-serif;
 }
+ion-content, ion-toolbar {
+    --background: black !important;
+}
 
 ion-button,
 ion-button:hover,
