@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-level2',
@@ -7,24 +6,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./level2.component.scss'],
 })
 export class Level2Component implements OnInit {
-  form: FormGroup;
   pass: string;
   id: any;
   layerClass: any;
   layers: any;
- isModalOpen = false;
-  constructor(private formBuilder: FormBuilder, private router: Router) {
-    this.form = this.formBuilder.group({
-      partI: ['', [Validators.required]],
-    });
+  isModalOpen = false;
+  constructor(private router: Router) {
   }
   ngOnInit() {
   }
 
-  next(id: any){
-    if(this.pass === '4'){
+  next(id: any) {
+    if (this.pass === '4') {
       this.router.navigate(['/part-III']);
-    }else{
+    } else {
       this.id = id;
     }
   }

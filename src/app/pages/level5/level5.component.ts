@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-level3',
-  templateUrl: './level3.component.html',
-  styleUrls: ['./level3.component.scss'],
+  selector: 'app-level5',
+  templateUrl: './level5.component.html',
+  styleUrls: ['./level5.component.scss'],
 })
-export class Level3Component implements OnInit {
+export class Level5Component implements OnInit {
 
   pass: string;
   id: any;
@@ -15,14 +15,14 @@ export class Level3Component implements OnInit {
   isModalOpen = false;
 
   constructor(private router: Router) {
-
+   
   }
   ngOnInit() {
   }
 
   next(id: any){
-    if(this.pass === 'ursamajor'){
-      this.router.navigate(['/part-IV']);
+    if(this.pass === '4'){
+      this.router.navigate(['/part-V']);
     }else{
       this.id = id;
     }

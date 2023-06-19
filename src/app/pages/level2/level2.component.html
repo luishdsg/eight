@@ -1,33 +1,25 @@
 
-<ion-header class="w3-black" collapse="fade">
-  <ion-toolbar>
-    <ion-title>Part II - <ion-text class=""><span class=""> {{'MSG.2' | translate}}</span> </ion-text></ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="w3-black ion-align-self-center max-w-500" scroll="true" fullscreen="true">
-  <ion-header class="w3-black" collapse="condense">
+  <ion-header class="w3-black" collapse="fade">
     <ion-toolbar class="w3-black d-flex" >
-      <ion-title slot="start" size="large">Part II</ion-title>
-      <ion-button fill="clear" download="puzzle" href="../../../assets/I06/1.jpg" slot="end">
+      <ion-title>Part II - <ion-text class=""><span class=""> {{'MSG.2' | translate}}</span> </ion-text></ion-title>
+      <ion-button fill="clear" download="followyourinstincts" href="../../../assets/I06/followyourinstincts.jpg" slot="end">
         <ion-icon name="download-outline"></ion-icon>
       </ion-button>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="w3-black ion-align-self-center max-w-500" scroll="true" fullscreen="true">
   <ion-grid class="w3-black h-75 mb-5 p-0">
     <ion-row class="row  h-100">
       <ion-col class="col-12 py-3 text-center">
-        <ion-img src="../../../assets/I06/1.jpg" class="puzzle-img h-auto w-100"></ion-img>
+        <ion-img src="../../../assets/I06/followyourinstincts.jpg" class="puzzle-img h-auto w-100"></ion-img>
       </ion-col>
           <ion-col class="col-12 text-center">
-              <form 
-                [formGroup]="form"
-                class="">
+              <div class="">
                 <ion-input
                   [(ngModel)]="pass"
                   [ngClass]="{ wrong: id === 1 }"id="1"
                   (keydown.space)="$event.preventDefault()"
                   (keyup.enter)="next((id = 1))"
-                  formControlName="partI"
                   class="text-left w-75 border rounded-2 w3-black"
                   type="text"
                   id="nme" 
@@ -38,7 +30,7 @@
                   maxlength="40"
                   pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                   required></ion-input>
-              </form>
+              </div>
             <ion-text
               [ngClass]="{ 'd-block': id === 1 }"
               id="1"

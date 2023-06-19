@@ -137,8 +137,12 @@ td {
     background: #fafafa !important;
 }
 
+.max-h-500{
+    max-height: 500px;
+}
+
 .bg-blur {
-    background-color: rgba(255, 255, 255, 0.379);
+    background-color: #ffffffdb;
     backdrop-filter: blur(10px);
 }
 

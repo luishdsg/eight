@@ -61,15 +61,13 @@
             </div>
           </ion-col>
           <ion-col *ngIf="content" class="col-12 text-center">
-              <form 
-                [formGroup]="form"
+              <div 
                 class="">
                 <ion-input
                   [(ngModel)]="pass"
                   [ngClass]="{ wrong: id === 1 }"id="1"
                   (keydown.space)="$event.preventDefault()"
                   (keyup.enter)="next((id = 1))"
-                  formControlName="partI"
                   class="text-left w-75 border rounded-2 w3-black"
                   type="text"
                   id="nme" 
@@ -80,7 +78,7 @@
                   maxlength="40"
                   pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                   required></ion-input>
-              </form>
+              </div>
             <ion-text
               [ngClass]="{ 'd-block': id === 1 }"
               id="1"

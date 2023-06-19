@@ -13,7 +13,7 @@
     "CODE": "senha",
     "TYPE": "digite aqui",
     "WRONG": "Humm...acho que algo está incorreto",
-    "TIP": "Use a barra de código para digitar a senha e avançar para a próxima fase"
+    "TIP": "Use a barra de código para digitar a senha e avançar para a próxima fase PS: escreva a frase na tela"
   },
   "MSG": {
     "2": "FollowYourInstincts", "3" : "4"
